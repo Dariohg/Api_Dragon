@@ -1,0 +1,15 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  img {
+    height: 40px;
+  }
+
+  span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+  }
+}

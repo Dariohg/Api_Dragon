@@ -1,0 +1,22 @@
+<div class="home">
+  <h1>Dragon Ball Characters</h1>
+
+  <!-- Grilla de personajes -->
+  <div class="card-grid">
+    <app-character-card
+      *ngFor="let character of characters"
+      [name]="character.name"
+      [image]="character.image"
+      [ki]="character.ki"
+      [maxKi]="character.maxKi"
+      [race]="character.race"
+    ></app-character-card>
+  </div>
+
+  <!-- Controles de paginación -->
+  <div class="pagination">
+    <button (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+    <span>Page {{ currentPage }} of {{ totalPages }}</span>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+  </div>
+</div>
